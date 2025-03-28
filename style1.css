@@ -1,0 +1,114 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: white;
+    user-select: none;
+}
+
+.navheader {
+    background-color: rgb(110, 0, 213);
+}
+
+.brand {
+    background-color: rgb(110, 0, 190);
+}
+
+.ulheader, .ulbrand, .ullogin {
+    display: flex;  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ulheader {
+    font-size: 25px;
+}
+
+.ulheader a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ulheader li {
+    padding: 1%;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.ulheader li:hover {
+    background-color: rgb(118, 0, 227);
+    border-bottom-color: white;
+}
+
+.ulbrand {
+    gap: 40px;
+}
+
+.ulbrand h1 {
+    padding: 10%;
+    white-space: nowrap;
+}
+
+.ulbrand img {
+    margin-left: 5%;
+    padding: 15%;
+    width: 90px;
+    height: 60px;
+}
+
+section {
+    margin-top: 10%;
+}
+
+#about {
+    background-image: url(img/wallpapersection1.jpg);
+    background-position: center;
+}
+
+#about .abouttext {
+    color: white;
+    padding: 1%;
+    max-width: 600px;
+    padding: 5%;
+}
+
+.abouttext p {
+    font-size: 20px;
+}
+
+#product1 {
+    padding: 5%;
+}
+
+#product1 .producttext {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 5%;
+}
+
+#products {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+#products img {
+    width: 300px;
+    height: 300px;
+}
