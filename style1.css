@@ -6,6 +6,7 @@ html, body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -18,14 +19,15 @@ header {
     top: 0;
     color: white;
     user-select: none;
+    z-index: 1000;
 }
 
 .navheader {
-    background-color: rgb(110, 0, 213);
+    background-color: rgb(129, 15, 186);
 }
 
 .brand {
-    background-color: rgb(110, 0, 190);
+    background-color: rgb(163, 38, 226);
 }
 
 .ulheader, .ulbrand, .ullogin {
@@ -52,7 +54,7 @@ header {
 }
 
 .ulheader li:hover {
-    background-color: rgb(118, 0, 227);
+    background-color: rgb(176, 46, 241);
     border-bottom-color: white;
 }
 
@@ -72,31 +74,50 @@ header {
     height: 60px;
 }
 
+.user {
+    display: flex;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.user img {
+    background-color: white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
 section {
-    margin-top: 10%;
+    margin-top: 9%;
 }
 
 #about {
-    background-image: url(img/wallpapersection1.jpg);
+    background-image: url(img/aboutbackground.jpg);
     background-position: center;
+    background-size: cover;
 }
 
 #about .abouttext {
     color: white;
-    padding: 1%;
+    padding: 2% 4%;
     max-width: 600px;
-    padding: 5%;
 }
 
 .abouttext p {
     font-size: 20px;
 }
 
-#product1 {
+.abouttext h1 {
+    font-size: 55px;
+}
+
+#productarea {
+    background-color: rgb(30, 30, 30);
     padding: 5%;
 }
 
-#product1 .producttext {
+#productarea .producttext {
+    color: white;
     text-align: center;
     font-size: 40px;
     padding-bottom: 5%;
@@ -105,10 +126,236 @@ section {
 #products {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#products .product1, .product2, .product3, .product4 {
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    padding: 1.5%;
+    transition: all 0.3s;
+}
+
+#products img, .product1:hover, .product2:hover, .product3:hover, .product4:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 
 #products img {
     width: 300px;
     height: 300px;
+}
+
+#logrev {
+    background-image: url(img/logrevbackground.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+#logrev .logrevtext {
+    color: white;
+    padding: 2% 4%;
+    max-width: 600px;
+}
+
+.logrevtext p {
+    font-size: 20px;
+}
+
+.logrevtext h1 {
+    font-size: 55px;
+}
+
+#logfooter {
+    background-color: rgb(36, 36, 36);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+}
+
+
+#logfooter .logfootertext {
+    color: white;
+    padding: 1%;
+}
+
+.logfootertext h1 {
+    font-size: 55px;
+}
+
+#logfooter a {
+    text-decoration: none;
+    padding: 5%;
+}
+
+#logfooter img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+#logfooter img {
+    border: 2px solid white;
+    padding: 2%;
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+
+.helpicon {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}
+
+.helpicon img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.helpicon a {
+    padding: 0.5%;
+    border-radius: 100%;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    section {
+        padding-top: 1%;
+    }
+
+    .ulheader {
+        font-size: 20px;
+    }
+
+    .ulbrand .logo {
+        display: none;
+    }
+
+    .ulbrand h1 {
+        margin-left: 10%;
+        padding: 0%;
+        white-space: nowrap;
+    }
+
+    .user img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #about {
+        margin-top: 10%;
+    }
+
+    #products {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #products .product1, .product2, .product3, .product4 {
+        background-color: white;
+        padding: 8%;
+        transition: all 0.3s;
+        margin-bottom: 10%;
+        transform: scale(0.8);
+    }
+    
+    #products .product1:hover, .product2:hover, .product3:hover, .product4:hover {
+        transform: scale(0.9);
+        transition: all 0.3s;
+    }
+    
+    #products img {
+        width: 200px;
+        height: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 1400px) {
+    #products img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #products {
+        gap: 1%;
+    }
+
+    .user {
+        display: flex;
+        margin-left: auto;
+        margin-right: 7%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    #products img {
+        width: 200px;
+        height: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .user {
+        margin-right: 10%;
+    }
+
+    #products img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #products .product1, .product2, .product3, .product4 {
+        width: 350px;
+        height: 300px;
+    }
+
+    section {
+        margin-top: 15%;
+    }
+
+
+}
+
+@media screen and (max-width: 720px) {
+    #products img {
+        width: 300px;
+        height: 300px;
+        padding: 0;
+    }
+
+    #products {
+        display: grid;
+        place-items: center;
+        flex-direction: column;
+    }
+
+
+    #products .product1, .product2, .product3, .product4 {
+        background-color: white;
+        width: 300px;
+        height: 420px;
+        padding: 5%;
+        margin-bottom: 25%;
+    }
+
+    .user {
+        margin-right: 15%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ulbrand h1 {
+        font-size: 20px;
+    }
 }
