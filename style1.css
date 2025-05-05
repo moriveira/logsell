@@ -111,9 +111,73 @@ section {
     font-size: 55px;
 }
 
+#brand {
+    margin: -40% 5% 0% 0%;
+    padding-bottom: 5%;
+    display: grid;
+    place-items: end;
+}
+
+#brand .gallery {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
+
+#brand .gallery img {
+    padding-left: 10%;
+    width: 250px;
+    height: 250px;
+}
+
+#brand .galleryimg img {
+    
+    width: 300px;
+    height: 300px;
+    
+}
+
+#brand .gallery a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+#brand .bestseller img {
+    padding-left: 10%;
+    width: 250px;
+    height: 250px;
+}
+
+#brand .bestseller {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+}
+
+#brand .bestseller a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+#brand .bestsellerimg img {
+    width: 300px;
+    height: 300px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+
 #productarea {
     background-color: rgb(30, 30, 30);
-    padding: 5%;
+    height: 900px;
+    overflow: hidden;
 }
 
 #productarea .producttext {
@@ -127,8 +191,19 @@ section {
     display: flex;
     justify-content: center;
     gap: 5%;
+    margin: 0% 5%;
     cursor: pointer;
     user-select: none;
+}
+
+#products .product1 p, .product2 p, .product3 p, .product4 p{
+    color: transparent;
+    transition: all 0.3s;
+}
+
+#products .product1:hover p, .product2:hover p, .product3:hover p, .product4:hover p {
+    color: black;
+    transition: all 0.3s;
 }
 
 #products .product1, .product2, .product3, .product4 {
@@ -137,6 +212,10 @@ section {
     height: 400px;
     padding: 1.5%;
     transition: all 0.3s;
+}
+
+#products .product1:hover, .product2:hover, .product3:hover, .product4:hover {
+    height: 500px;
 }
 
 #products img, .product1:hover, .product2:hover, .product3:hover, .product4:hover {
@@ -294,6 +373,14 @@ section {
         margin-left: auto;
         margin-right: 7%;
     }
+
+    #brand {
+        margin: 5% 5% 0% 5%;
+        padding-bottom: 5%;
+        display: grid;
+        place-items: start;
+    }
+    
 }
 
 @media screen and (max-width: 1200px) {
@@ -334,6 +421,10 @@ section {
         padding: 0;
     }
 
+    #productarea {
+        height: 2450px;
+    }
+
     #products {
         display: grid;
         place-items: center;
@@ -351,6 +442,16 @@ section {
 
     .user {
         margin-right: 15%;
+    }
+
+    #brand {
+        display: grid;
+        place-items: center;
+    }
+
+    #brand .row {
+        display: flex;
+        flex-direction: column;
     }
 }
 
